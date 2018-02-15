@@ -11,9 +11,6 @@
 * @ version: 2.1
 */
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
@@ -23,13 +20,13 @@ class ChatServer {
 
     DatagramSocket serverSocket = null;
     int port = 0;
-    int port1 = 0;
-    int port2 = 0;
-    String name1 = "";
-    String name2 = "";
+    int port1 = 0; // Port nymber of the first client to connect
+    int port2 = 0; // Port number of teh second client to connect
+    String name1 = ""; // Name of the first client
+    String name2 = ""; // Name of the second client
     InetAddress ipAddress = null;
-    InetAddress ipAddress1 = null;
-    InetAddress ipAddress2 = null;
+    InetAddress ipAddress1 = null; // IP Address of the first client
+    InetAddress ipAddress2 = null; // IP Address of teh second client
     String message = "";
     String response = "";
     DatagramPacket receivePacket;
@@ -79,7 +76,7 @@ class ChatServer {
           break;
         case 1:
           // Wait for 2nd client to connect
-          // tthen notify both clients that 2nd client connected via `200` message
+          // then notify both clients that 2nd client connected via `200` message
           System.out.println("Waiting for the 2nd client to connect.");
 
           receivePacket = new DatagramPacket(receiveData, receiveData.length);
