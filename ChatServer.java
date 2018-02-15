@@ -20,8 +20,8 @@ class ChatServer {
 
     DatagramSocket serverSocket = null;
     int port = 0;
-    int port1 = 0; // Port nymber of the first client to connect
-    int port2 = 0; // Port number of teh second client to connect
+    int port1 = 0; // Port number of the first client to connect
+    int port2 = 0; // Port number of the second client to connect
     String name1 = ""; // Name of the first client
     String name2 = ""; // Name of the second client
     InetAddress ipAddress = null;
